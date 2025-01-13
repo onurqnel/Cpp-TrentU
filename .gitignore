@@ -1,0 +1,60 @@
+# Compiled object files
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Logs and debugging files
+*.log
+*.trace
+
+# CLion-specific files and directories
+.idea/
+cmake-build-*/  # Ignore CLion's build directories
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Generated Test Results
+Testing/
+test_detail.xml
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Backup files
+*.bak
+*.orig
+*.old
+
+# Other OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific CLion settings
+*.iml
