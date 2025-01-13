@@ -25,7 +25,7 @@
 *.trace
 
 # CLion-specific files and directories
-.idea/
+.idea/  # Exclude CLion's project settings directory
 cmake-build-*/  # Ignore CLion's build directories
 cmake-build-debug/
 cmake-build-release/
