@@ -20,6 +20,9 @@
 *.out
 *.app
 
+.idea/
+.idea/*
+
 # Logs and debugging files
 *.log
 *.trace
