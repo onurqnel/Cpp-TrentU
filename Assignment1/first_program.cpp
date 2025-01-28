@@ -29,24 +29,33 @@ int main()
      const int YEAR = 365; // Number of days in a year
      int soldBottles; // Variable to store the number of bottles sold
 
-     // Prompt user for the total number of bottles sold
+     // Ask user for the total number of bottles sold
      cout << "Enter the total number of bottles sold today: " << endl;
      cin >> soldBottles;
 
-     // Calculate profits based on the number of bottles sold
-     double dailyProfit = soldBottles * BOTTLE_PRICE; // Profit for a single day
-     double yearlyProfit = dailyProfit * YEAR; // Profit for a year
-     double tenYearlyProfit = yearlyProfit * 10; // Profit for 10 years
+     // Check if the input is valid
+     if (soldBottles <= 0)
+     {
+          // Output error message if the input is invalid
+          cout << "Please enter positive number" << endl;
+     }
+     else
+     {
+          // Calculate profits based on the number of bottles sold
+          double dailyProfit = soldBottles * BOTTLE_PRICE; // Profit for a single day
+          double yearlyProfit = dailyProfit * YEAR; // Profit for a year
+          double tenYearlyProfit = yearlyProfit * 10; // Profit for 10 years
 
-     // Configure output to show two decimal places
-     cout << fixed << setprecision(2);
+          // Configure output to show two decimal places
+          cout << fixed << setprecision(2);
 
-     // Display daily, yearly, and 10-year profits
-     cout << "You have sold: " << soldBottles << " bottles"
-          << " and today's profit is: $" << dailyProfit << endl;
-     cout << "You have sold: " << soldBottles * YEAR << " bottles"
-          << " the yearly profit is: $" << yearlyProfit << endl;
-     cout << "You have sold: " << soldBottles * 10 * YEAR << " bottles"
-          << " the 10 yearly profit is: $" << tenYearlyProfit << endl;
+          // Display daily, yearly, and 10-year profits
+          cout << "You have sold: " << soldBottles << " bottles"
+               << " and today's profit is: $" << dailyProfit << endl;
+          cout << "You have sold: " << soldBottles * YEAR << " bottles"
+               << " the yearly profit is: $" << yearlyProfit << endl;
+          cout << "You have sold: " << soldBottles * 10 * YEAR << " bottles"
+               << " the 10 yearly profit is: $" << tenYearlyProfit << endl;
+     }
      return 0; // Indicate successful program termination
 }
