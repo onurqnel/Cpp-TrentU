@@ -7,7 +7,7 @@
 * Student Email: onuronel@trentu.ca
 * Date: 2025-02-02
 *
-* Program Description:
+* Final Version:
 *   This program reads integers from a user-specified input file, computes
 *   the sum, average, and squares of the numbers, then writes the results to an output file.
 *
