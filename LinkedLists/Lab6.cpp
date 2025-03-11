@@ -11,6 +11,7 @@ class LinkedList
 {
 public:
     Node* head;
+    Node* iter;
 
     LinkedList() : head(NULL)
     {
@@ -23,6 +24,26 @@ public:
         newNode->next = head;
         head = newNode;
     }
+
+    void insertAtLast(int value)
+    {
+        Node* newNode = new Node();
+        newNode->data = value;
+
+        if (head == NULL)
+        {
+            head = newNode;
+            return;
+        }
+
+        Node* iter = head;
+        while (iter->next != NULL)
+        {
+            iter = iter->next;
+        }
+        iter->next = newNode;
+    }
+
 
     void print()
     {
@@ -48,5 +69,6 @@ int main()
     list1.insertAtBeginning(100);
     list1.insertAtBeginning(50);
     list1.insertAtBeginning(25);
+    list1.insertAtLast(31);
     list1.print();
 }
