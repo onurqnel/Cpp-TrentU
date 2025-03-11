@@ -14,15 +14,14 @@ class LinkedList
 {
 public:
     Node* head; // Pointer to the first node in the list
-    Node* iter; // Pointer for the iterations.
 
-    // Constructor initializes an empty list (head is set to NULL)
-    LinkedList() : head(nullptr), iter(nullptr)
+    // Constructor initializes an empty list
+    LinkedList() : head(nullptr)
     {
     }
 
     // Inserts a new node at the beginning of the list
-    void insertAtBeginning(int value)
+    void insertAtBeginning(const int value)
     {
         Node* newNode = new Node();
         // Create a new node and assign the given value
@@ -42,13 +41,12 @@ public:
     }
 
     // Inserts a new node at the end of the list
-    void insertAtLast(int value)
+    void insertAtLast(const int value)
     {
-        // Create a new node and assign the given value
         Node* newNode = new Node();
+        // Create a new node and assign the given value
         newNode->data = value;
         newNode->next = nullptr; // This will be the last node, so its next pointer is NULL
-        newNode->prev = nullptr; // Initialize prev pointer to NULL
 
         // If the list is empty, the new node becomes the head
         if (head == nullptr)
@@ -59,7 +57,7 @@ public:
 
         // Start at the head of the list
         // Move iter to the end of the list stop when next is NULL
-        iter = head;
+        Node* iter = head;
         while (iter->next != nullptr) // While next points to something
         {
             iter = iter->next;
@@ -91,8 +89,10 @@ public:
     // Returns a pointer to the last node of the list
     Node* end()
     {
-        if (!head) // If the list is empty, return nullptr
+        if (head == nullptr) // If the list is empty, return nullptr
+        {
             return nullptr;
+        }
         Node* node = head;
         while (node->next) // Traverse until the last node
         {
@@ -129,18 +129,13 @@ int main()
     list1.printFromBeginning();
     list1.printFromLast();
 
-    // What do you notice about the value of p and NP?
-    // Why?
     LinkedList* NP = &list1;
-    cout << "\nNP -> " <<NP->head;
-    Node *p = list1.front();
-    cout << "\n p -> "<<p;
-    cout << "\n p data -> " << p->data << endl;
+    cout << "\nNP -> " << NP->head; // Print head's pointed location
+    Node* p = list1.front(); // Return head
+    cout << "\n p -> " << p; // Print head's pointed location through a pointer
+    cout << "\n p data -> " << p->data << endl; // Actual Value
 
-    //Why do you notice about the values of p?
-    //What do you notice about the values of p->data?
-    //Why are the values the way they are?
     *p = *p->next->next;
-    cout << "\n p nn -> "<<p;
-    cout << "\n p nn data -> " << p->data << endl;
+    cout << "\n p nn -> " << p; // Print head's pointed location
+    cout << "\n p nn data -> " << p->data << endl; // Print next-next (H->60->23) from head which is 23
 }
