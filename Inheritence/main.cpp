@@ -83,7 +83,6 @@ public:
     int height{};
     string eyeColor;
 
-
     Human()
         : Mammal("No Name", "Human", 0, 4, 0, 0, false)
     {
@@ -107,11 +106,11 @@ public:
 
         if (languages.empty())
         {
-            cout << "no languages." << endl;
+            cout << "no languages" << endl;
             return;
         }
 
-        for (size_t i = 0; i < languages.size(); ++i)
+        for (int i = 0; i < languages.size(); ++i)
         {
             cout << languages[i];
             if (i < languages.size() - 1)
