@@ -28,9 +28,9 @@ public:
     {
     }
 
-    virtual ~Mammal() = default;
+    // virtual ~Mammal() = default;
 
-    virtual void printType()
+    void printType()
     {
         cout << "I am an object of type Mammal" << endl;
     }
@@ -61,7 +61,7 @@ public:
     {
     }
 
-    void printType() override
+    void printType()
     {
         cout << "I am an object of type Cat" << endl;
     }
@@ -95,7 +95,7 @@ public:
         address = Address;
     }
 
-    void printType() override
+    void printType()
     {
         cout << "I am an object of type Human" << endl;
     }
