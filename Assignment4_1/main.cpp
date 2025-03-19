@@ -72,15 +72,15 @@ EvenNumber EvenNumber::getPrevious() const
  */
 int main()
 {
-    // Create an EvenNumber object using the default constructor (should be 0)
+    // Create an EvenNumber object using the default constructor
     const EvenNumber num1;
     cout << "Default Even Number: " << num1.getValue() << endl;
 
     // Create an EvenNumber object initialized with an even value
-    const EvenNumber num2(8);
+    const EvenNumber num2(16);
     cout << "Created Even Number: " << num2.getValue() << endl;
 
-    // Create an EvenNumber object initialized with an odd value (should adjust to next even)
+    // Create an EvenNumber object initialized with an odd value
     const EvenNumber num3(9);
     cout << "Created Even Number from odd input: " << num3.getValue() << endl;
 
