@@ -1,4 +1,0 @@
-The numbers are: 4 4 4 4 4 4 4 4 
-Average of the numbers: 4
-Square of the numbers: 16 16 16 16 16 16 16 16 
-Sum of squares: 128
