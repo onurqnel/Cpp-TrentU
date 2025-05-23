@@ -1,3 +1,3 @@
 # Winter2025 Trent University
 
-**COIS2040** Assignments and labs with Dr.Gabriel Chol. Topics Include Classes, Objects, Inheritance, Encapsulation, Polymorphism, Class Derivation, Abstract Classes, Interfaces, Static Class Members, Object Construction And Destruction, Linked Lists, Exception Handling, Function Overloading And Overriding, Overload Resolution, Container Classes, Template Classes.
+**COIS2040** Assignments and labs with Dr.Gabriel Chol. Topics include C++ data types. Pointers and memory management. Object-oriented programming in C++. File and stream I/O. Pre-processor macros. Templates and the Standard Template Library. Numerical computation in C++. 
